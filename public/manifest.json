@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "R3BL Shortlink",
+  "description": "Make go links",
+  "version": "2.0",
+  "action": {
+    "default_title": "Click to make go link for URL",
+    "default_popup": "index.html"
+  },      
+  "permissions": ["contextMenus","activeTab", "tabs", "storage", "clipboardWrite"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+L",
+        "mac": "Alt+L"
+      },
+      "description": "Make a go link for URL in address bar"
+    }
+  }
+}
